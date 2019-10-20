@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        body {
+            background-color: #ffffff;
+            height: 800px
+        }
+        
+        #a {
+            position: relative;
+            border-style: dashed;
+            left: 19%;
+            width: 62%;
+            height: 400px;
+            display: inline-block;
+            border: #ffe4b5 solid thin;
+            background-color: #ffe4b5
+        }
+        
+        #rabbit-left {
+            width: 200px;
+            padding: 12% 0% 0% 3%;
+            float: left;
+        }
+        
+        #text-area {
+            width: 50%;
+            height: 100%;
+            float: left;
+            background-color: #f0cf95;
+        }
+        
+        #bigtitle {
+            font-size: 35px;
+            color: #cc3747;
+            text-align: center;
+            line-height: 1em;
+            font-weight: 700;
+            width: 80%;
+            margin: 0 auto;
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 20px
+        }
+        
+        #rule {
+            font-size: medium;
+            padding-left: 5%;
+            padding-top: 5%;
+        }
+        
+        #game {
+            padding-left: 5%;
+        }
+        
+        #rabbit-right {
+            transform: scale(-1, 1);
+            width: 150px;
+            float: left;
+            padding-top: 20%
+        }
+        
+        .button {
+            background-color: #e65440;
+            color: #ffdada;
+            font-size: medium;
+            margin: 10px 0 15px 0;
+            padding-bottom: 2px;
+            border-radius: 6px;
+            -webkit-box-shadow: 0px 0px 0px 1px #b24132 inset, 0px 0px 0px 2px #ea624a inset, 0px 4px 0px 0px #a53c2e, 0px 4px 0px 0px #7e2e23, 0px 4px 0px 0px rgba(0, 0, 0, .15);
+            -moz-box-shadow: 0px 0px 0px 1px #b24132 inset, 0px 0px 0px 2px #ea624a inset, 0px 4px 0px 0px #a53c2e, 0px 4px 0px 0px #7e2e23, 0px 4px 0px 0px rgba(0, 0, 0, .15);
+            -ie-box-shadow: 0px 0px 0px 1px #b24132 inset, 0px 0px 0px 2px #ea624a inset, 0px 4px 0px 0px #a53c2e, 0px 4px 0px 0px #7e2e23, 0px 4px 0px 0px rgba(0, 0, 0, .15);
+            box-shadow: 0px 0px 0px 1px #b24132 inset, 0px 0px 0px 2px #ea624a inset, 0px 4px 0px 0px #a53c2e, 0px 4px 0px 0px #7e2e23, 0px 4px 0px 0px rgba(0, 0, 0, .15);
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1 id="bigtitle">猜数字</h1>
+
+    <div id="a">
+        <div id="rabbit-left">
+            <img src="WechatIMG17408.png" width="100%" height="100%">
+        </div>
+
+        <div id="text-area">
+
+
+            <div id="rule">
+                <b style="font-size:large">游戏规则</b>
+                <p style="margin-left: 20px">猜[0,50)范围内的数字</p>
+                <p style="margin-left: 20px">点击“提交”，弹窗会告诉你你的猜测数字大了或小了</p>
+                <p style="margin-left: 20px">根据提示，逐渐接近正确答案！</p>
+            </div>
+
+            <div id="game">
+                <form action="#" method="get">
+                    <b style="font-size:large">猜测的数字</b></br>
+                    <input type="text" id="num" name="num" style="height:21px; margin-top: 5px" /></br>
+                    <input type="button" class="button" onclick="checknum()" value="提交" />
+                    <input type="button" class="button" onclick="rerandom()" value="重新开始" />
+                    <button type="button" class="button" onclick="showanswer()">显示答案</button>
+                </form>
+                <div id="showanswer"><br></div>
+                <div id="SmallGroup"></div>
+                <div id="LargeGroup"></div>
+                <div id="GuessTime"></div>
+            </div>
+        </div>
+
+        <div id="rabbit-right">
+            <img src="WechatIMG17408.png" width="100%" height="100%">
+        </div>
+    </div>
+
+</body>
+<script>
+    var randomn = parseInt(Math.random() * 50);
+    var time = 0;
+
+    function showanswer() {
+        document.getElementById("showanswer").innerHTML = "正确答案是" + randomn;
+    }
+
+    function rerandom() {
+        randomn = parseInt(Math.random() * 50);
+        time = 0;
+        document.getElementById("SmallGroup").innerHTML = "";
+        document.getElementById("LargeGroup").innerHTML = "";
+        document.getElementById("GuessTime").innerHTML = "";
+        document.getElementById("showanswer").innerHTML = "<br>";
+    }
+
+    function checknum() {
+        time = time + 1;
+        if (time == 1) {
+            document.getElementById("SmallGroup").innerHTML = "猜小了：";
+            document.getElementById("LargeGroup").innerHTML = "猜大了：";
+        }
+        document.getElementById("GuessTime").innerHTML = "猜测次数：" + time;
+        var a1 = parseInt(document.getElementById("num").value);
+        document.getElementById("num").value = null;
+
+        if (a1 > randomn) {
+
+            alert("你猜的数字大啦");
+            document.getElementById("LargeGroup").innerHTML = document.getElementById("LargeGroup").innerHTML + a1 + " ";
+
+        } else if (a1 < randomn) {
+
+            alert("你猜的数字小了");
+            document.getElementById("SmallGroup").innerHTML = document.getElementById("SmallGroup").innerHTML + a1 + " ";
+
+        } else if (a1 == randomn) {
+
+            alert("恭喜你，猜对了！");
+
+        } else alert("请输入[0,50)之间的数字")
+    }
+</script>
+
+</html>
