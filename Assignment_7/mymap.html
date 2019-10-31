@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Christmas City Map</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdn.leafletjs.com/leaflet-0.7/leaflet.css" />
+</head>
+
+<body>
+    <div id="map" style="width: 600px; height: 550px"></div>
+
+    <script src="https://cdn.leafletjs.com/leaflet-0.7/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+
+    <button type="button" class="btn btn-warning" id='roll_up' onclick="show_districts();">Show Districts</button><br>
+
+    <script>
+        function show_districts() {
+
+            for (var i in data) {
+                var latlng = L.latLng({
+                    lat: data[i].latitude,
+                    lng: data[i].longitude
+                });
+                L.marker(latlng)
+                    .bindPopup('<a href="' + data[i].Pic_url + '" target="_blank">' + '<img src="' + data[i].Pic_url + '" width = "80px"><br>' + data[i].City + '</a>')
+                    .addTo(map);
+            }
+
+        }
+    </script>
+
+    <script src='scriptlib2.js'></script>
+    <script>
+        var map = L.map('map').setView([51, 10], 6);
+        mapLink =
+            '<a href="http://openstreetmap.org">OpenStreetMap</a>';
+        L.tileLayer(
+            'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: 'Map data &copy; ' + mapLink,
+                maxZoom: 18,
+            }).addTo(map);
+        var items = [];
+        var airtable_read_endpoint = "https://api.airtable.com/v0/apprwuMHH4kdOowEX/Location?api_key=keyzbRdSbMsfNyECL";
+        var data = [];
+        $.getJSON(airtable_read_endpoint, function(result) {
+            $.each(result.records, function(key, value) {
+                items = {};
+                items["City"] = value.fields.City;
+                items["Pic"] = value.fields.Pic;
+                items["Pic_url"] = value.fields.Pic_url;
+                items["latitude"] = Number(value.fields.latitude);
+                items["longitude"] = value.fields.longitude;
+                data.push(items);
+                console.log(items);
+            });
+        });
+    </script>
+
+
+
+</body>
+
+</html>
