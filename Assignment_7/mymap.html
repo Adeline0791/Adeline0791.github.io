@@ -2,9 +2,15 @@
 <html>
 
 <head>
-    <title>Christmas City Map</title>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.js"></script>
+    <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js">
+    </script>
+
 </head>
 
 <body>
@@ -18,7 +24,6 @@
 
     <script>
         function show_districts() {
-
             for (var i in data) {
                 var latlng = L.latLng({
                     lat: data[i].latitude,
@@ -28,11 +33,10 @@
                     .bindPopup('<a href="' + data[i].Pic_url + '" target="_blank">' + '<img src="' + data[i].Pic_url + '" width = "80px"><br>' + data[i].City + '</a>')
                     .addTo(map);
             }
-
         }
     </script>
 
- 
+
     <script>
         var map = L.map('map').setView([51, 10], 6);
         mapLink =
