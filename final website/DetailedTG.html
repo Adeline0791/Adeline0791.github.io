@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap2.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="color/default.css" rel="stylesheet">
+    <script src="js/tg.js"></script>
+    <script>
+        function changecard(event) {
+            console.log($(event).attr("width"));
+            $(this).attr("class").css('box-shadow', '0 0 5px grey');
+            // $('.abcd').css('box-shadow','0 0 5px grey'); 
+        };
+    </script>
+    <title>Travelling Guide</title>
+</head>
+
+<body>
+    <div class="navbar-wrapper"></div>
+    <!-- Header area -->
+    <div class="header-slider" id="header-wrapper">
+        <header class="clearfix"></header>
+    </div>
+    <!-- spacer section -->
+    <div class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                <a class="navbar-brand"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="DetailedGFS.html">SHOPPING</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active">
+                        <a href="DetailedTG.html">TRAVELLING</a>
+                    </li>
+                    <li>
+                        <a href="DetailedRD.html">RESTAURANTS</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="index.html">HOME</a>
+                    </li>
+                    <li>
+                        <a href="DetailedCA.html">ACTIVITIES</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1 style="font-size: 43px; font-weight:600">Landmarks</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section" style="height: 2700px; background-color: lavender;">
+        <!-- <div class="container"> -->
+        <div style="position: relative;  margin-left: 2%;">
+            <div style="float:left; width:60%;">
+                <div class="col-md-4 text-center" style="cursor:pointer; margin-bottom: 40px;" onclick="window.open('https://www.google.com/search?q=Alexanderplatz','_blank');">
+                    <div style="border-radius: 8px; background: #fbfbfb;  border: 1px solid #d5d5d5;">
+                        <img src="img/travellingguide/new/Alexanderplatz.jpg" class="img-responsive" style="border-radius:8px 8px 0 0">
+                        <div class="caption" style="padding: 5px 0 5px 0">
+                            <h3 style="font-size: 22px;">Alexanderplatz</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center" style="cursor:pointer; margin-bottom: 40px;" onclick="window.open('https://www.google.com/search?q=Allianz','_blank');">
+                    <div style="border-radius: 8px; background: #fbfbfb;  border: 1px solid #d5d5d5;">
+                        <img src="img/travellingguide/new/Allianz.jpg" class="img-responsive" style="border-radius:8px 8px 0 0">
+                        <div class="caption" style="padding: 5px 0 5px 0">
+                            <h3 style="font-size: 22px;">Allianz</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center" style="cursor:pointer; margin-bottom: 40px;" onclick="window.open('https://www.google.com/search?q=Berlindom','_blank');">
+                    <div style="border-radius: 8px; background: #fbfbfb;  border: 1px solid #d5d5d5;">
+                        <img src="img/travellingguide/new/Berlindom.jpg" class="img-responsive" style="border-radius:8px 8px 0 0">
+                        <div class="caption" style="padding: 5px 0 5px 0">
+                            <h3 style="font-size: 22px;">Berlindom</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center" style="cursor:pointer; margin-bottom: 40px;" onclick="window.open('https://www.google.com/search?q=BurgHohenzollern','_blank');">
+                    <div style="border-radius: 8px; background: #fbfbfb;  border: 1px solid #d5d5d5;">
+                        <img src="img\travellingguide\new\BurgHohenzollern.jpg" class="img-responsive" style="border-radius:8px 8px 0 0">
+                        <div class="caption" style="padding: 5px 0 5px 0">
+                            <h3 style="font-size: 22px;">BurgHohenzollern</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center" style="cursor:pointer; margin-bottom: 40px;" onclick="window.open('https://www.google.com/search?q=colognecathedra','_blank');">
+                    <div style="border-radius: 8px; background: #fbfbfb;  border: 1px solid #d5d5d5;">
+                        <img src="img/travellingguide/new/colognecathedra.jpg" class="img-responsive" style="border-radius:8px 8px 0 0">
+                        <div class="caption" style="padding: 5px 0 5px 0">
+                            <h3 style="font-size: 22px;">colognecathedra</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center" style="cursor:pointer; margin-bottom: 40px;" onclick="window.open('https://www.google.com/search?q=DeutschesMuseum','_blank');">
+                    <div style="border-radius: 8px; background: #fbfbfb;  border: 1px solid #d5d5d5;">
+                        <img src="img/travellingguide/new/DeutschesMuseum.jpg" class="img-responsive" style="border-top-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px;">
+                        <div class="caption" style="padding: 5px 0 5px 0">
+                            <h3 style="font-size: 22px; width:100%">DeutschesMuseum</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center" style="cursor:pointer; margin-bottom: 40px;" onclick="window.open('https://www.google.com/search?q=DRRRmuseum','_blank');">
+                    <div style="border-radius: 8px; background: #fbfbfb;  border: 1px solid #d5d5d5;">
+                        <img src="img/travellingguide/new/DRRRmuseum.jpg" class="img-responsive" style="border-radius:8px 8px 0 0">
+                        <div class="caption" style="padding: 5px 0 5px 0">
+                            <h3 style="font-size: 22px;">DRRRmuseum</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center" style="cursor:pointer; margin-bottom: 40px;" onclick="window.open('https://www.google.com/search?q=EltzCastle','_blank');">
+                    <div style="border-radius: 8px; background: #fbfbfb;  border: 1px solid #d5d5d5;">
+                        <img src="img/travellingguide/new/EltzCastle.jpg" class="img-responsive" style="border-radius:8px 8px 0 0">
+                        <div class="caption" style="padding: 5px 0 5px 0">
+                            <h3 style="font-size: 22px;">EltzCastle</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center" style="cursor:pointer; margin-bottom: 40px;" onclick="window.open('https://www.google.com/search?q=Gendarmenmarkt','_blank');">
+                    <div style="border-radius: 8px; background: #fbfbfb;  border: 1px solid #d5d5d5;">
+                        <img src="img/travellingguide/new/Gendarmenmarkt.jpg" class="img-responsive" style="border-radius:8px 8px 0 0">
+                        <div class="caption" style="padding: 5px 0 5px 0">
+                            <h3 style="font-size: 22px;">Gendarmenmarkt</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center" style="cursor:pointer; margin-bottom: 40px;" onclick="window.open('https://www.google.com/search?q=Heidelbergschloss','_blank');">
+                    <div style="border-radius: 8px; background: #fbfbfb;  border: 1px solid #d5d5d5;">
+                        <img src="img/travellingguide/new/Heidelbergschloss.jpg" class="img-responsive" style="border-radius:8px 8px 0 0">
+                        <div class="caption" style="padding: 5px 0 5px 0">
+                            <h3 style="font-size: 22px;">Heidelbergschloss</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center" style="cursor:pointer; margin-bottom: 40px;" onclick="window.open('https://www.google.com/search?q=JüdischesMuseumBerlin','_blank');">
+                    <div style="border-radius: 8px; background: #fbfbfb;  border: 1px solid #d5d5d5;">
+                        <img src="img/travellingguide/new/JudischesMuseumBerlin.jpg" class="img-responsive" style="border-radius:8px 8px 0 0">
+                        <div class="caption" style="padding: 5px 0 5px 0">
+                            <h3 style="font-size: 22px;">JüdischesMuseumBerlin</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center" style="cursor:pointer; margin-bottom: 40px;" onclick="window.open('https://www.google.com/search?q=Kaiser-Wilhelm-Gedächtniskirche','_blank');">
+                    <div style="border-radius: 8px; background: #fbfbfb;  border: 1px solid #d5d5d5;">
+                        <img src="img/travellingguide/new/Kaiser.jpg" class="img-responsive" style="border-radius:8px 8px 0 0">
+                        <div class="caption" style="padding: 0px 0 0px 0">
+                            <h3 style="font-size: 22px;">Kaiser-Wilhelm-Gedächtniskirche</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center" style="cursor:pointer; margin-bottom: 40px;" onclick="window.open('https://www.google.com/search?q=Marienplatz','_blank');">
+                    <div style="border-radius: 8px; background: #fbfbfb;  border: 1px solid #d5d5d5;">
+                        <img src="img/travellingguide/new/Marienplatz.jpg" class="img-responsive" style="border-radius:8px 8px 0 0">
+                        <div class="caption" style="padding: 5px 0 5px 0">
+                            <h3 style="font-size: 22px;">Marienplatz</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center" style="cursor:pointer; margin-bottom: 40px;" onclick="window.open('https://www.google.com/search?q=MunchnerResidenz','_blank');">
+                    <div style="border-radius: 8px; background: #fbfbfb;  border: 1px solid #d5d5d5;">
+                        <img src="img/travellingguide/new/MunchnerResidenz.jpg" class="img-responsive" style="border-radius:8px 8px 0 0">
+                        <div class="caption" style="padding: 5px 0 5px 0">
+                            <h3 style="font-size: 22px;">MunchnerResidenz</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center" style="cursor:pointer; margin-bottom: 40px;" onclick="window.open('https://www.google.com/search?q=Museumisland','_blank');">
+                    <div style="border-radius: 8px; background: #fbfbfb;  border: 1px solid #d5d5d5;">
+                        <img src="img/travellingguide/new/Museumisland.jpg" class="img-responsive" style="border-radius:8px 8px 0 0">
+                        <div class="caption" style="padding: 5px 0 5px 0">
+                            <h3 style="font-size: 22px;">Museumisland</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center" style="cursor:pointer; margin-bottom: 40px;" onclick="window.open('https://www.google.com/search?q=Neuschwanstein','_blank');">
+                    <div style="border-radius: 8px; background: #fbfbfb;  border: 1px solid #d5d5d5;">
+                        <img src="img/travellingguide/new/Neuschwanstein.jpg" class="img-responsive" style="border-radius:8px 8px 0 0">
+                        <div class="caption" style="padding: 5px 0 5px 0">
+                            <h3 style="font-size: 22px;">Neuschwanstein</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center" style="cursor:pointer; margin-bottom: 40px;" onclick="window.open('https://www.google.com/search?q=Nurnbergburg','_blank');">
+                    <div style="border-radius: 8px; background: #fbfbfb;  border: 1px solid #d5d5d5;">
+                        <img src="img/travellingguide/new/Nurnbergburg.jpg" class="img-responsive" style="border-radius:8px 8px 0 0">
+                        <div class="caption" style="padding: 5px 0 5px 0">
+                            <h3 style="font-size: 22px;">Nurnbergburg</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center" style="cursor:pointer; margin-bottom: 40px;" onclick="window.open('https://www.google.com/search?q=Nymphenburg','_blank');">
+                    <div style="border-radius: 8px; background: #fbfbfb;  border: 1px solid #d5d5d5;">
+                        <img src="img/travellingguide/new/Nymphenburg.jpg" class="img-responsive" style="border-radius:8px 8px 0 0">
+                        <div class="caption" style="padding: 5px 0 5px 0">
+                            <h3 style="font-size: 22px;">Nymphenburg</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center" style="cursor:pointer; margin-bottom: 40px;" onclick="window.open('https://www.google.com/search?q=PotsdamerPlatz','_blank');">
+                    <div style="border-radius: 8px; background: #fbfbfb;  border: 1px solid #d5d5d5;">
+                        <img src="img/travellingguide/new/PotsdamerPlatz.jpg" class="img-responsive" style="border-radius:8px 8px 0 0">
+                        <div class="caption" style="padding: 5px 0 5px 0">
+                            <h3 style="font-size: 22px;">PotsdamerPlatz</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center" style="cursor:pointer; margin-bottom: 40px;" onclick="window.open('https://www.google.com/search?q=Römerberg','_blank');">
+                    <div style="border-radius: 8px; background: #fbfbfb;  border: 1px solid #d5d5d5;">
+                        <img src="img/travellingguide/new/Romerberg.jpg" class="img-responsive" style="border-radius:8px 8px 0 0">
+                        <div class="caption" style="padding: 5px 0 5px 0">
+                            <h3 style="font-size: 22px;">Römerberg</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center" style="cursor:pointer; margin-bottom: 40px;" onclick="window.open('https://www.google.com/search?q=Sanssouci','_blank');">
+                    <div style="border-radius: 8px; background: #fbfbfb;  border: 1px solid #d5d5d5;">
+                        <img src="img/travellingguide/new/Sanssouci.jpg" class="img-responsive" style="border-radius:8px 8px 0 0">
+                        <div class="caption" style="padding: 5px 0 5px 0">
+                            <h3 style="font-size: 22px;">Sanssouci</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center" style="cursor:pointer; margin-bottom: 40px;" onclick="window.open('https://www.google.com/search?q=SchlossLinderhof','_blank');">
+                    <div style="border-radius: 8px; background: #fbfbfb;  border: 1px solid #d5d5d5;">
+                        <img src="img/travellingguide/new/SchlossLinderhof.jpg" class="img-responsive" style="border-radius:8px 8px 0 0">
+                        <div class="caption" style="padding: 5px 0 5px 0">
+                            <h3 style="font-size: 22px;">SchlossLinderhof</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center" style="cursor:pointer; margin-bottom: 40px;" onclick="window.open('https://www.google.com/search?q=Schokoladenmuseum','_blank');">
+                    <div style="border-radius: 8px; background: #fbfbfb;  border: 1px solid #d5d5d5;">
+                        <img src="img/travellingguide/new/Schokoladenmuseum.jpg" class="img-responsive" style="border-radius:8px 8px 0 0">
+                        <div class="caption" style="padding: 5px 0 5px 0">
+                            <h3 style="font-size: 22px;">Schokoladenmuseum</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center" style="cursor:pointer; margin-bottom: 40px;" onclick="window.open('https://www.google.com/search?q=Wartburg','_blank');">
+                    <div style="border-radius: 8px; background: #fbfbfb;  border: 1px solid #d5d5d5;">
+                        <img src="img/travellingguide/new/Wartburg.jpg" class="img-responsive" style="border-radius:8px 8px 0 0">
+                        <div class="caption" style="padding: 5px 0 5px 0">
+                            <h3 style="font-size: 22px;">Wartburg</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center" style="cursor:pointer; margin-bottom: 40px;" onclick="window.open('https://www.google.com/search?q=WurzburgerR','_blank');">
+                    <div style="border-radius: 8px; background: #fbfbfb;  border: 1px solid #d5d5d5;">
+                        <img src="img/travellingguide/new/WurzburgerR.jpg" class="img-responsive" style="border-radius:8px 8px 0 0">
+                        <div class="caption" style="padding: 5px 0 5px 0">
+                            <h3 style="font-size: 22px;">Wurzburger</h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div style="float:left; width: 40%;">
+                <div class="iframe_block">
+                    <iframe id="framePage1" src="detailedtgmap.html" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="section text-center">
+        <div>
+            <div class="col-md-12">
+                <h1 style="padding: 80px 0 40px; font-size: 43px; font-weight:600">Road Trip Route</h1>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="thumbnail" style="height: 400px;">
+                        <a href="romanticroad.html" target="_blank"><img src="img\travellingguide\romanticroad.jpg" class="img-responsive"></a>
+                        <div class="caption">
+                            <h3>Romantic Road</h3>
+                            <p>Romantic atmosphere, fragrance of grapes, and the unique leisure in Germany.&nbsp;</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="thumbnail" style="height: 400px;">
+                        <a href="alphsroad.html" target="_blank"><img src="img\travellingguide\alphs.jpg" class="img-responsive"></a>
+                        <div class="caption">
+                            <h3>Alphs Road</h3>
+                            <p>This winding and panoramic tour runs through the breathtaking mountain scenery of southern Bavaria.&nbsp;</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="thumbnail" style="height: 400px;">
+                        <a href=" blackforestroad.html" target="_blank"><img src="img\travellingguide\hesse.jpg" class="img-responsive"></a>
+                        <div class="caption">
+                            <h3>Blackforest Road</h3>
+                            <p>Most parts of Blackforest Road pass through the verdant black forest peaks in a gentle arc.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="thumbnail" style="height: 400px;">
+                        <a href=" fairytaleroad.html" target="_blank"><img src="img\travellingguide\fairytale.jpg" class="img-responsive"></a>
+                        <div class="caption">
+                            <h3>Fairy Tale Road</h3>
+                            <p>The journey will bring you a double harvest of art and history, while taking you to the magical palaces and fairytale castles.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1 class="text-center" style=" font-size: 43px; font-weight:600">Tips on Trip</h1>
+    <div style="margin:0 0 100px">
+        <div id="qa1" style="margin:40px 20% 40px 10%; font-size:28px; font-weight:400; font-family: 'Open Sans', Arial, sans-serif; color:#444; cursor:pointer">➕ Where can I book hotels in Germany?</div>
+        <div>
+            <p id="a1" style="margin:0 18% 20px 13%; font-size:20px" hidden="">If you want to book hotels in your trip, you can download apps like booking, Expedia, Agoda… to find out hotels that you are interested in. Notice that price can be different in different apps and it is better to make a comparison. Sometimes
+                special discounts are randomly provided in different platforms, and you may enjoy a great discount on the hotel that you want to book.</p>
+            <p id="a2" style="margin:0 18% 20px 13%; font-size:20px" hidden="">In addition, if you want to book hotels with special design or enjoy local experiences in Germany, please try Airbnb. From flats to even castles, you can find everything you want.</p>
+        </div>
+        <div id="qa2" style="margin:60px 20% 40px 10%; font-size:28px; font-weight:400; font-family: 'Open Sans', Arial, sans-serif; color:#444; cursor:pointer">➕ How can I choose the transportation in Germany?</div>
+        <div>
+            <p id="a3" style="margin:0 18% 20px 13%; font-size:20px" hidden="">The most recommended way is —— to rent a car! You can find cars rental information in SIXT, hertz, Europcar, Avis… Please check out whether your local driving license is also available in Germany, and do not forget about car insurance. After
+                all preparations, you can enjoy splendid land views in this country!</p>
+            <p id="a4" style="margin:0 18% 20px 13%; font-size:20px" hidden="">Besides, trains and buses are also great transportation ways especially for individual passengers. DB is the official railway company in Germany, you can buy tickets in railway stations or in mobile app.</p>
+            <p id="a5" style="margin:0 18% 20px 13%; font-size:20px" hidden="">For bus trips, you can also enjoy low price in Germany. Flixbus is a large bus company that operates in Germany, which also has its own apps. GoEuro is also a recommended transportation app, and you can book bus tickets from other small bus
+                companies in this agency.</p>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="span6 offset3">
+                    <ul class="social-networks">
+                        <li>
+                            <a href="#"><i class="icon-circled icon-bgdark icon-instagram icon-2x"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="icon-circled icon-bgdark icon-twitter icon-2x"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="icon-circled icon-bgdark icon-dribbble icon-2x"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="icon-circled icon-bgdark icon-pinterest icon-2x"></i></a>
+                        </li>
+                    </ul>
+                    <p class="copyright">© Maxim Theme. All rights reserved.</p>
+                    <div class="credits">
+                        <!-- All the links in the footer should remain intact. You can delete
+                    the links only if you purchased the pro version. Licensing information:
+                    https://bootstrapmade.com/license/ Purchase the pro version with working
+                    PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Maxim -->Designed by
+                        <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                    </div>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <!-- ./container -->
+    </footer>
+</body>
+
+</html>
