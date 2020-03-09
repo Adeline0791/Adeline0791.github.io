@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <section class="jumbotron text-center">
+      <div class="container">
+          <h1>{{album_user.name}}</h1>
+          <p class="lead text-muted">You can discover details on Christmas activities in Germany here!</p>
+      </div>
+    </section>
+
+    <div class="album py-5 bg-light">
+      <div class="container">
+
+          {% for item in dataset %} {% if loop.index == 1 %}{% set counter = ( counter | default(1) ) %}{% endif %} {% if counter == 1 %}
+          <div class="row">{% endif %}
+              <div class="col-md-4">
+                  <div class="card mb-4 shadow-sm">
+                      <img width="100%" height="200px" src="{{ item['Picture'] }}">
+                      <div class="card-body">
+                          <p class="card-text">Activity：{{ item['Name'] }}<br>City:{{ item['City'] }}<br>Start:{{ item['StartDate'] }}<br>End:{{ item['EndDate'] }}<br>Location:{{ item['Location'] }}<br>Budget:{{ item['Budget'] }}</p>
+                          <div class="d-flex justify-content-between align-items-center">
+                              <div class="btn-group">
+                                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              {% if counter == 3 %}</div>
+          <!--end row-->{% set counter = ( counter | default(1) ) %}{% else %}{% set counter = ( counter | default(0) ) + 1 %}{% endif %} {% endfor %}
+      </div>
+    </div>
+    </div>
+
+{% endblock %}
